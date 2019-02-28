@@ -1,0 +1,27 @@
+{
+  "name": "doc_builder",
+  "version": "1.0.0",
+  "description": "simple rmd document definition builder",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/infoplane/doc_builder.git"
+  },
+  "keywords": [
+    "electron",
+    "json"
+  ],
+  "author": "Marcus Windle <marcus.windle@info-plane.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/infoplane/doc_builder/issues"
+  },
+  "homepage": "https://github.com/infoplane/doc_builder#readme",
+  "devDependencies": {
+    "electron": "^4.0.6"
+  }
+}
