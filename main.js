@@ -1,6 +1,7 @@
 const electron = require('electron');
+const {app, ipcMain, BrowserWindow, session, dialog} = require('electron');
 
-const {app, BrowserWindow} = require('electron');
+var fs = require('fs');
 
 let win;
 
@@ -9,11 +10,13 @@ function createWindow() {
 
     win.loadFile('index.html');
 
-    win.webContents.openDevTools()
+    win.webContents.openDevTools();
 
     win.on('closed', () => {
         win = null;
-    })
+    });
+
+    require('./menu/mainmenu');
 }
 
 app.on('ready', createWindow);
@@ -28,4 +31,8 @@ app.on('activate', () => {
     if (win === null) {
         createWindow()
     }
+});
+
+ipcMain.on('test', () => {
+    console.log("//////************>>>>>");
 });
